@@ -107,105 +107,113 @@ export default {
           <img src="../assets/Login/images/img-01.png" alt="IMG" />
         </div>
 
-        <form class="login100-form validate-form">
-          <span class="login100-form-title"> Create User </span>
+        <div @keyup.enter="createUser">
+          <form @submit.prevent="createUser" class="login100-form validate-form">
+            <span class="login100-form-title"> Create User </span>
 
-          <div
-            class="wrap-input100 validate-input"
-            data-validate="Valid email is required: ex@abc.xyz"
-          >
-            <input
-              class="input100"
-              type="text"
-              name="First name"
-              placeholder="First Name"
-              v-model="firstName"
-            />
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </span>
-          </div>
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Valid email is required: ex@abc.xyz"
+            >
+              <input
+                class="input100"
+                type="text"
+                name="First name"
+                placeholder="First Name"
+                v-model="firstName"
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </span>
+            </div>
 
-          <div
-            class="wrap-input100 validate-input"
-            data-validate="Valid email is required: ex@abc.xyz"
-          >
-            <input
-              class="input100"
-              type="text"
-              name="Last name"
-              placeholder="Last Name"
-              v-model="lastName"
-            />
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </span>
-          </div>
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Valid email is required: ex@abc.xyz"
+            >
+              <input
+                class="input100"
+                type="text"
+                name="Last name"
+                placeholder="Last Name"
+                v-model="lastName"
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </span>
+            </div>
 
-          <div
-            class="wrap-input100 validate-input"
-            data-validate="Valid email is required: ex@abc.xyz"
-          >
-            <input class="input100" type="text" name="email" placeholder="Email" v-model="email" />
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </span>
-          </div>
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Valid email is required: ex@abc.xyz"
+            >
+              <input
+                class="input100"
+                type="text"
+                name="email"
+                placeholder="Email"
+                v-model="email"
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </span>
+            </div>
 
-          <div
-            class="wrap-input100 validate-input"
-            data-validate="Valid email is required: ex@abc.xyz"
-          >
-            <input
-              class="input100"
-              type="text"
-              name="confirm email"
-              placeholder="Confirm Email"
-              v-model="confirmemail"
-            />
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </span>
-          </div>
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Valid email is required: ex@abc.xyz"
+            >
+              <input
+                class="input100"
+                type="text"
+                name="confirm email"
+                placeholder="Confirm Email"
+                v-model="confirmemail"
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </span>
+            </div>
 
-          <div class="wrap-input100 validate-input" data-validate="Password is required">
-            <input
-              class="input100"
-              type="password"
-              name="pass"
-              placeholder="Password"
-              v-model="password"
-            />
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-lock" aria-hidden="true"></i>
-            </span>
-          </div>
+            <div class="wrap-input100 validate-input" data-validate="Password is required">
+              <input
+                class="input100"
+                type="password"
+                name="pass"
+                placeholder="Password"
+                v-model="password"
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+              </span>
+            </div>
 
-          <div class="wrap-input100 validate-input" data-validate="Password is required">
-            <input
-              class="input100"
-              type="password"
-              name="confirm pass"
-              placeholder="Confirm Password"
-              v-model="confirmpassword"
-            />
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-lock" aria-hidden="true"></i>
-            </span>
-          </div>
-          <div v-if="error">
-            {{ errormessage }}
-          </div>
-          <div class="container-login100-form-btn">
-            <span class="login100-form-btn" @click="createUser"> Create </span>
-          </div>
-        </form>
+            <div class="wrap-input100 validate-input" data-validate="Password is required">
+              <input
+                class="input100"
+                type="password"
+                name="confirm pass"
+                placeholder="Confirm Password"
+                v-model="confirmpassword"
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div v-if="error">
+              {{ errormessage }}
+            </div>
+            <div class="container-login100-form-btn">
+              <span class="login100-form-btn" @click="createUser"> Create </span>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
